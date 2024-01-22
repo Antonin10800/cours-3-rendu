@@ -43,6 +43,12 @@ class ExempleTest extends TestCase
         $product->getPrice('EUR');
     }
 
+    public function testGetName(): void
+    {
+        $product = new Product('Test Product', ['USD' => 100], 'food');
+        $this->assertEquals('Test Product', $product->getName());
+    }
+
     public function testBuyProduct(): void
     {
         $wallet = new Wallet('USD');
