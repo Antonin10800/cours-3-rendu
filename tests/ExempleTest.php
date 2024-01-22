@@ -36,6 +36,13 @@ class ExempleTest extends TestCase
         $this->assertEquals(['USD' => 100], $product->getPrices());
     }
 
+    public function testExecptionGetPrice(): void
+    {
+        $this->expectException(\Exception::class);
+        $product = new Product('Test Product', ['USD' => 100], 'food');
+        $product->getPrice('EUR');
+    }
+
     public function testBuyProduct(): void
     {
         $wallet = new Wallet('USD');

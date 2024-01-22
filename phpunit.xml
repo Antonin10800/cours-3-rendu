@@ -9,14 +9,14 @@
     <!-- Configuration des répertoires de tests-->
     <testsuites>
         <testsuite name="Unit">
-            <directory suffix="ExempleTest.php">./tests/</directory>
+            <directory suffix="Test.php">./tests/</directory>
         </testsuite>
 
     </testsuites>
     <!-- Configuration des répertoires de sources-->
     <source>
         <include>
-            <directory suffix=".php">./app</directory>
+            <directory suffix=".php">./src</directory>
         </include>
     </source>
     <!-- Configuration des varibles d'environnement pour les tests-->
