@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Configuration de base -->
+<phpunit
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
+        bootstrap="vendor/autoload.php"
+        colors="true">
+
+    <!-- Configuration des répertoires de tests-->
+    <testsuites>
+        <testsuite name="Unit">
+            <directory suffix="ExempleTest.php">./tests/</directory>
+        </testsuite>
+
+    </testsuites>
+    <!-- Configuration des répertoires de sources-->
+    <source>
+        <include>
+            <directory suffix=".php">./app</directory>
+        </include>
+    </source>
+    <!-- Configuration des varibles d'environnement pour les tests-->
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <env name="XDEBUG_MODE" value="coverage" />
+    </php>
+</phpunit>
